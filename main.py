@@ -42,7 +42,6 @@ class GUI(tk.Tk):
                         print(e)
                         self.value = "Error"
 
-
                 self.scvalue.set(self.value)
                 self.screeen.update()
             elif text == 'C':
@@ -50,12 +49,14 @@ class GUI(tk.Tk):
                 self.screeen.update()
 
             elif text == '//':
-                self.sqrtval = float(np.sqrt(self.scvalue.get()))
+                self.val = float(self.scvalue.get())
+                self.sqrtval = np.sqrt(self.val)
                 self.scvalue.set(self.sqrtval)
                 self.screeen.update()
 
             elif text == '///':
-                self.cbrtval = float(np.cbrt(self.scvalue.get()))
+                self.val = float(self.scvalue.get())
+                self.cbrtval = np.cbrt(self)
                 self.scvalue.set(self.cbrtval)
                 self.screeen.update()
             
